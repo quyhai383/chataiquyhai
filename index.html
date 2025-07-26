@@ -13,13 +13,14 @@
   <script>
     async function sendGPT() {
       const message = document.getElementById("input").value;
+
       const response = await fetch("https://eoczrwy64u7ppvj.m.pipedream.net", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message })
       });
 
-      const result = await response.json();
+      const result = await response.json(); // << đúng ở đây
       document.getElementById("output").innerText = result.data.ai_response;
     }
   </script>
