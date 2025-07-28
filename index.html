@@ -144,7 +144,7 @@
           const fr=new FileReader(); fr.onload=()=>r(fr.result); fr.readAsDataURL(f);
         });
         appendImage("user", b); save("user", b);
-        const res = await fetch("https://eoczrwy64u7ppvj.m.pipedream.net", {
+        const res = await fetch("https://eosbj4fru8ny766.m.pipedream.net", {
           method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({message:"", image:b})
         });
         const d = await res.json(), r = d.data?.ai_response||"❗ Không có phản hồi.";
